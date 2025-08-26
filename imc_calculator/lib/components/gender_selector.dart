@@ -41,7 +41,7 @@ class _GenderSelectorState extends State<GenderSelector> {
                   
                       Image.asset('assets/images/male.png',height: 100,),
                       SizedBox(height: 10),
-                      Text('Male', style: TextStyles.primaryTextStyle,)
+                      Text('MALE', style: TextStyles.primaryTextStyle,)
                   
                     ],
                     
@@ -76,7 +76,7 @@ class _GenderSelectorState extends State<GenderSelector> {
                   
                       Image.asset('assets/images/female.png',height: 100,),
                       SizedBox(height: 10),
-                      Text('Female', style: TextStyles.primaryTextStyle,)
+                      Text('FEMALE', style: TextStyles.primaryTextStyle,)
                   
                     ],
                   
