@@ -13,7 +13,7 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(title: Text('Imc Calculator'),
+        appBar: AppBar(title: Text('BMI Calculator'),
                         backgroundColor: AppColors.primary,
                         foregroundColor: Colors.white,),
         backgroundColor: AppColors.background,

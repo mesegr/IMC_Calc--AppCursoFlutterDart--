@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:imc_calculator/components/calculate_buton.dart';
 import 'package:imc_calculator/components/gender_selector.dart';
 import 'package:imc_calculator/components/height_selector.dart';
 import 'package:imc_calculator/components/number_selector.dart';
@@ -13,6 +14,7 @@ class ImcHome extends StatefulWidget {
 class _ImcHomeState extends State<ImcHome> {
   int selectedAge = 20;
   int selectedWeight = 70;
+  double selectedHeight = 170;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -20,7 +22,13 @@ class _ImcHomeState extends State<ImcHome> {
       children: [
 
         GenderSelector(),
-        HeightSelector(),
+        HeightSelector(heightSelected: selectedHeight,setHeight: (value) {
+            setState(() {
+                  
+                  selectedHeight = value;
+          
+                });
+        },),
 
         Padding(
           padding: const EdgeInsets.only(left: 16,right: 16),
@@ -68,7 +76,9 @@ class _ImcHomeState extends State<ImcHome> {
           
             ],
           ),
-        )
+        ),
+        Spacer(),
+        SizedBox(height: 88,width: double.infinity,child: CalculateButton(height: selectedHeight,weight: selectedWeight))
       ],
     );
   }

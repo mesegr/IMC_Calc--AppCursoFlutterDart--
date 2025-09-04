@@ -28,15 +28,21 @@ class _NumberSelectorState extends State<NumberSelector> {
         
           children: [
         
-            Text(widget.title, style: TextStyles.primaryTextStyle,),
+            Padding(
+              padding: const EdgeInsets.all(3.0),
+              child: Text(widget.title, style: TextStyles.primaryTextStyle,),
+            ),
             Text(widget.value.toString(),style: TextStyle(color: Colors.white, fontSize: 36),),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                FloatingActionButton(onPressed: () {widget.onDecrement();}, shape: CircleBorder(),backgroundColor: AppColors.primary,child: Icon(Icons.remove,color: Colors.white),),
-                SizedBox(width: 8,),
-                FloatingActionButton(onPressed: () {widget.onIncrement();}, shape: CircleBorder(),backgroundColor: AppColors.primary,child: Icon(Icons.add,color: Colors.white),)
-              ],
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  FloatingActionButton(onPressed: () {widget.onDecrement();}, shape: CircleBorder(),backgroundColor: AppColors.primary,heroTag: null,child: Icon(Icons.remove,color: Colors.white),),
+                  SizedBox(width: 16),
+                  FloatingActionButton(onPressed: () {widget.onIncrement();}, shape: CircleBorder(),backgroundColor: AppColors.primary,heroTag: null,child: Icon(Icons.add,color: Colors.white),)
+                ],
+              ),
             ),
           ],
         ),
